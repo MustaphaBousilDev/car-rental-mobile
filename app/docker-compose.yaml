@@ -19,12 +19,13 @@ services:
              npm run build --prod"  # Build the Ionic app for production
 
   nginx:
-    container_name: ionic-nginx
-    image: nginx:alpine
-    ports:
-      - '80:80'  # Serve app on port 80
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
-      - ./www:/usr/share/nginx/html
-    depends_on:
-      - ionic
+   container_name: ionic-nginx
+   image: nginx:alpine
+   ports:
+    - '8080:80'  # Serve app on port 8080
+   volumes:
+    - ./nginx.conf:/etc/nginx/nginx.conf
+    - ./www:/usr/share/nginx/html
+   depends_on:
+    - ionic
+
