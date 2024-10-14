@@ -3,7 +3,7 @@ version: '3'
 services:
   ionic:
     container_name: ionic-app
-    image: node:20
+    image: ionic-fuck
     working_dir: /app
     volumes:
       - ./:/app
